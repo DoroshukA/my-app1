@@ -1,0 +1,31 @@
+<input type="file" (change)="fileChangeEvent($event)" />
+
+<image-cropper
+    [imageChangedEvent]="imageChangedEvent"
+    [maintainAspectRatio]="true"
+    [cropperStaticHeight]="128"
+    [cropperStaticWidth]="128"
+    
+    format="png"
+    (imageCropped)="imageCropped($event)"
+    (imageLoaded)="imageLoaded()"
+    (cropperReady)="cropperReady()"
+    (loadImageFailed)="loadImageFailed()"
+></image-cropper>
+
+<img [src]="croppedImage" />
+
+<div>
+  <div>
+    <h3>app.component.html</h3>
+    <img src="../assets/app1_1.jpg">
+  </div>
+  <div>
+    <h3>app.component.ts</h3>
+    <img src="../assets/app1_2.jpg">
+  </div>
+  <div>
+    <h3>app.module.ts</h3>
+    <img src="../assets/app1_3.jpg">
+  </div>
+</div>
